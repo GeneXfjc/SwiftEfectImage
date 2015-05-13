@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="EfectImage01" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4io-ps-qlk"/>
+                        <viewControllerLayoutGuide type="bottom" id="q6T-us-dmr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VL5-JP-pRt">
+                                <rect key="frame" x="16" y="11" width="568" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="STb-xp-M3E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="47"/>
+                                <state key="normal" title="押してください"/>
+                                <connections>
+                                    <action selector="ConvertImage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="814-jg-RdV"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="工事.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="V8c-n2-U48">
+                                <rect key="frame" x="16" y="73" width="568" height="534"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="568" id="7Of-e3-ce5"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="V8c-n2-U48" secondAttribute="bottom" constant="-7" id="CQC-CM-GI2"/>
+                            <constraint firstItem="V8c-n2-U48" firstAttribute="top" secondItem="VL5-JP-pRt" secondAttribute="bottom" constant="8" symbolic="YES" id="DgD-jD-phh"/>
+                            <constraint firstItem="VL5-JP-pRt" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="11" id="h0e-2s-IXl"/>
+                            <constraint firstItem="VL5-JP-pRt" firstAttribute="leading" secondItem="V8c-n2-U48" secondAttribute="leading" id="lAq-oR-Ntb"/>
+                            <constraint firstItem="VL5-JP-pRt" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="lsG-zu-Qaz"/>
+                            <constraint firstItem="VL5-JP-pRt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="zeN-zK-z9x"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ImageView" destination="V8c-n2-U48" id="Ugd-Al-QQd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="wDj-Jv-wLF">
+                    <connections>
+                        <action selector="pinchImage:" destination="vXZ-lx-hvc" id="Uyu-kH-sx9"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <tapGestureRecognizer id="X2B-Uh-dhF">
+                    <connections>
+                        <action selector="pinchground:" destination="vXZ-lx-hvc" id="MM7-68-jkY"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="455" y="231"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="工事.jpg" width="183" height="275"/>
+    </resources>
+</document>
